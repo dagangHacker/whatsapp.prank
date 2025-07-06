@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp Hack Tool</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: "Courier New", Courier, monospace;
+      padding: 20px;
+    }
+    .terminal {
+      white-space: pre-line;
+      font-size: 1.1em;
+    }
+    .blinker {
+      animation: blink 1s step-start infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal" id="terminal">
+    Initializing WhatsApp Hack Tool...
+  </div>
+  <script>
+    const terminal = document.getElementById("terminal");
+
+    const steps = [
+      "[1/5] Connecting to WhatsApp servers...",
+      "[2/5] Bypassing end-to-end encryption...",
+      "[3/5] Locating target phone number...",
+      "[4/5] Injecting exploit...",
+      "[5/5] Extracting message history...",
+      "⚠️ ACCESS DENIED ⚠️",
+      "Traceback (most recent call last):",
+      "Error 403: Unauthorized access attempt detected",
+      "You have been reported to WhatsApp Security 🚨"
+    ];
+
+    let i = 0;
+
+    function showNextLine() {
+      if (i < steps.length) {
+        terminal.innerText += "\n" + steps[i];
+        i++;
+        setTimeout(showNextLine, 1500);
+      } else {
+        terminal.innerHTML += '\n\n<span class="blinker">_</span>';
+      }
+    }
+
+    setTimeout(showNextLine, 2000);
+  </script>
+</body>
+</html>
